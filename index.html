@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HYBE x BTS | Transformación Digital</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+padding:15px;
+text-align:center;
+box-shadow:0 0 25px rgba(255,0,140,0.4);
+}
+
+.logo{
+font-size:2rem;
+color:#ff4fc3;
+font-weight:bold;
+letter-spacing:4px;
+text-shadow:0 0 15px #ff008c;
+margin-bottom:10px;
+}
+
+nav button{
+background:#ff008c;
+border:none;
+padding:12px 20px;
+margin:5px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.4s;
+}
+
+nav button:hover{
+transform:scale(1.1);
+background:#b300ff;
+box-shadow:0 0 20px #ff00aa;
+}
+
+.section{
+min-height:100vh;
+padding:130px 10%;
+display:none;
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.section::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.content{
+position:relative;
+z-index:2;
+}
+
+.active{
+display:block;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1,h2,h3{
+color:#ff4fc3;
+margin-bottom:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:25px;
+margin:25px 0;
+backdrop-filter:blur(8px);
+transition:0.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,0,140,0.2);
+box-shadow:0 0 25px rgba(255,0,140,0.5);
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-top:20px;
+transition:0.5s;
+}
+
+img:hover{
+transform:scale(1.03);
+box-shadow:0 0 25px rgba(255,0,140,0.6);
+}
+
+.member-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.member-card{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:20px;
+text-align:center;
+transition:0.5s;
+}
+
+.member-card:hover{
+transform:translateY(-10px);
+background:rgba(179,0,255,0.2);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+background:rgba(0,0,0,0.5);
+}
+
+th,td{
+padding:15px;
+border:1px solid #ff4fc3;
+}
+
+th{
+background:#ff008c;
+}
+
+.hero-title{
+font-size:5rem;
+text-shadow:0 0 25px #ff00aa;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 15px #ff00aa;
+}
+to{
+text-shadow:0 0 40px #ff66cc;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">💜 HYBE x BTS</div>
+
+<nav>
+<button onclick="showSection(0)">🏠 Inicio</button>
+<button onclick="showSection(1)">📌 Modelo</button>
+<button onclick="showSection(2)">🔍 DOFA</button>
+<button onclick="showSection(3)">🎯 Objetivos</button>
+<button onclick="showSection(4)">📋 Plan</button>
+<button onclick="showSection(5)">📊 Seguimiento</button>
+<button onclick="showSection(6)">💜 BTS</button>
+<button onclick="showSection(7)">✨ Conclusión</button>
+</nav>
+
+</header>
+
+<!-- PORTADA -->
+
+<div class="section active" id="sec0" style="background-image:url('hybe.jpg')">
+
+<div class="content" style="text-align:center; padding-top:120px;">
+
+<h1 class="hero-title">HYBE x BTS</h1>
+
+<h2>Transformación Digital Sostenible</h2>
+
+<div class="card">
+<p style="font-size:1.3rem;">
+Este proyecto analiza cómo HYBE Corporation y BTS representan
+una nueva era de innovación digital, sostenibilidad y conexión global
+a través del fandom ARMY y plataformas tecnológicas como Weverse.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- MODELO -->
+
+<div class="section" id="sec1" style="background-image:url('bts.jpg')">
+
+<div class="content">
+
+<h2>📌 Modelo de Transformación Digital</h2>
+
+<div class="card">
+
+<p>
+HYBE utiliza un modelo centrado en la innovación tecnológica,
+la sostenibilidad y la experiencia del usuario.
+Gracias a plataformas digitales como Weverse,
+la empresa logró transformar la relación entre artistas y fandoms.
+</p>
+
+<img src="hybe.jpg">
+
+</div>
+
+</div>
+</div>
+
+<!-- DOFA -->
+
+<div class="section" id="sec2" style="background-image:url('hybe.jpg')">
+
+<div class="content">
+
+<h2>🔍 Diagnóstico DOFA</h2>
+
+<div class="card">
+<h3>Fortalezas</h3>
+<p>
+Comunidad ARMY global, gran impacto cultural,
+liderazgo tecnológico y estabilidad financiera.
+</p>
+</div>
+
+<div class="card">
+<h3>Debilidades</h3>
+<p>
+Altos niveles de producción física y consumo de recursos.
+</p>
+</div>
+
+<div class="card">
+<h3>Oportunidades</h3>
+<p>
+Crear entretenimiento sostenible y campañas ecológicas.
+</p>
+</div>
+
+<div class="card">
+<h3>Amenazas</h3>
+<p>
+Presión ambiental y críticas hacia el impacto industrial.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- OBJETIVOS -->
+
+<div class="section" id="sec3" style="background-image:url('bts.jpg')">
+
+<div class="content">
+
+<h2>🎯 Objetivos</h2>
+
+<div class="card">
+
+<h3>Objetivo General</h3>
+
+<p>
+Implementar estrategias digitales sostenibles
+que fortalezcan el impacto positivo de HYBE y BTS.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Objetivos Específicos</h3>
+
+<p>
+• Reducir el impacto ambiental.<br>
+• Impulsar energías renovables.<br>
+• Mejorar bienestar del talento.<br>
+• Fortalecer la participación de ARMY.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<!-- PLAN -->
+
+<div class="section" id="sec4" style="background-image:url('hybe.jpg')">
+
+<div class="content">
+
+<h2>📋 Plan de Acción</h2>
+
+<table>
+
+<tr>
+<th>Estrategia</th>
+<th>Acción</th>
+<th>Periodo</th>
+</tr>
+
+<tr>
+<td>Digitalización Verde</td>
+<td>Optimización de plataformas digitales</td>
+<td>2026-2027</td>
+</tr>
+
+<tr>
+<td>Merch Sostenible</td>
+<td>Lightsticks ecológicos y reciclables</td>
+<td>2026-2028</td>
+</tr>
+
+<tr>
+<td>Bienestar Artístico</td>
+<td>Programas de salud mental</td>
+<td>2026</td>
+</tr>
+
+</table>
+
+<img src="lightstick.jpg">
+
+</div>
+</div>
+
+<!-- SEGUIMIENTO -->
+
+<div class="section" id="sec5" style="background-image:url('bts.jpg')">
+
+<div class="content">
+
+<h2>📊 Seguimiento</h2>
+
+<div class="card">
+
+<p>
+El proyecto será monitoreado mediante indicadores ESG,
+participación del fandom ARMY y métricas de sostenibilidad.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<!-- BTS -->
+
+<div class="section" id="sec6" style="background-image:url('bts.jpg')">
+
+<div class="content">
+
+<h2 style="text-align:center;">💜 BTS y su Impacto Global</h2>
+
+<div class="member-grid">
+
+<div class="member-card">
+<h3>RM</h3>
+<p>Líder de BTS y portavoz de mensajes sociales.</p>
+</div>
+
+<div class="member-card">
+<h3>Jungkook</h3>
+<p>Artista global e ícono digital de la nueva generación.</p>
+</div>
+
+<div class="member-card">
+<h3>Jimin</h3>
+<p>Reconocido por su sensibilidad artística y emocional.</p>
+</div>
+
+<div class="member-card">
+<h3>ARMY</h3>
+<p>Uno de los fandoms más grandes e influyentes del mundo.</p>
+</div>
+
+</div>
+
+<img src="bts.jpg">
+
+</div>
+</div>
+
+<!-- CONCLUSION -->
+
+<div class="section" id="sec7" style="background-image:url('hybe.jpg')">
+
+<div class="content">
+
+<h2>✨ Conclusión</h2>
+
+<div class="card">
+
+<p>
+HYBE y BTS representan un modelo innovador donde
+la tecnología, la música y la sostenibilidad pueden coexistir.
+La transformación digital no solo depende de herramientas tecnológicas,
+sino también del impacto social y humano que generan.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+function showSection(n){
+
+document.querySelectorAll('.section').forEach(sec=>{
+sec.classList.remove('active');
+});
+
+document.getElementById('sec'+n).classList.add('active');
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+
+</script>
+
+</body>
+</html>

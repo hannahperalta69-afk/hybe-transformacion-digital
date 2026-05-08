@@ -20,25 +20,26 @@ font-family:Arial, sans-serif;
 background:#050505;
 color:white;
 overflow-x:hidden;
+line-height:1.8;
 }
 
 header{
 position:fixed;
-width:100%;
 top:0;
-z-index:1000;
-background:rgba(0,0,0,0.7);
+width:100%;
+background:rgba(0,0,0,0.75);
 backdrop-filter:blur(10px);
 padding:15px;
+z-index:1000;
 text-align:center;
 box-shadow:0 0 25px rgba(255,0,140,0.4);
 }
 
 .logo{
 font-size:2rem;
-color:#ff4fc3;
 font-weight:bold;
 letter-spacing:4px;
+color:#ff4fc3;
 text-shadow:0 0 15px #ff008c;
 margin-bottom:10px;
 }
@@ -46,7 +47,7 @@ margin-bottom:10px;
 nav button{
 background:#ff008c;
 border:none;
-padding:12px 20px;
+padding:12px 18px;
 margin:5px;
 border-radius:50px;
 color:white;
@@ -56,8 +57,8 @@ transition:0.4s;
 }
 
 nav button:hover{
-transform:scale(1.1);
-background:#b300ff;
+transform:scale(1.08);
+background:#a100ff;
 box-shadow:0 0 20px #ff00aa;
 }
 
@@ -65,24 +66,14 @@ box-shadow:0 0 20px #ff00aa;
 min-height:100vh;
 padding:130px 10%;
 display:none;
-background-size:cover;
-background-position:center;
 position:relative;
-}
-
-.section::before{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-}
-
-.content{
-position:relative;
-z-index:2;
+background:
+linear-gradient(
+135deg,
+#090909,
+#17001f,
+#25002e
+);
 }
 
 .active{
@@ -101,36 +92,59 @@ transform:translateY(0);
 }
 }
 
-h1,h2,h3{
+.content{
+max-width:1200px;
+margin:auto;
+}
+
+.hero-title{
+font-size:5rem;
+text-align:center;
 color:#ff4fc3;
-margin-bottom:20px;
+text-shadow:0 0 25px #ff00aa;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 15px #ff00aa;
+}
+to{
+text-shadow:0 0 40px #ff66cc;
+}
+}
+
+.subtitle{
+text-align:center;
+font-size:1.5rem;
+margin-top:20px;
+color:#f2d7ff;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
+background:rgba(255,255,255,0.08);
 padding:30px;
 border-radius:25px;
-margin:25px 0;
+margin-top:30px;
 backdrop-filter:blur(8px);
 transition:0.5s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-background:rgba(255,0,140,0.2);
+background:rgba(255,0,140,0.18);
 box-shadow:0 0 25px rgba(255,0,140,0.5);
 }
 
-img{
-width:100%;
-border-radius:20px;
-margin-top:20px;
-transition:0.5s;
+h2{
+color:#ff4fc3;
+margin-bottom:20px;
+font-size:2.2rem;
 }
 
-img:hover{
-transform:scale(1.03);
-box-shadow:0 0 25px rgba(255,0,140,0.6);
+h3{
+margin-bottom:15px;
+color:#ff9adf;
 }
 
 .member-grid{
@@ -142,15 +156,14 @@ margin-top:40px;
 
 .member-card{
 background:rgba(255,255,255,0.08);
-padding:20px;
+padding:25px;
 border-radius:20px;
-text-align:center;
-transition:0.5s;
+transition:0.4s;
 }
 
 .member-card:hover{
-transform:translateY(-10px);
-background:rgba(179,0,255,0.2);
+transform:scale(1.05);
+background:rgba(161,0,255,0.25);
 }
 
 table{
@@ -163,25 +176,26 @@ background:rgba(0,0,0,0.5);
 th,td{
 padding:15px;
 border:1px solid #ff4fc3;
+text-align:left;
 }
 
 th{
 background:#ff008c;
 }
 
-.hero-title{
-font-size:5rem;
-text-shadow:0 0 25px #ff00aa;
-animation:glow 2s infinite alternate;
+.quote{
+font-style:italic;
+text-align:center;
+font-size:1.3rem;
+margin-top:40px;
+color:#ffd6f4;
 }
 
-@keyframes glow{
-from{
-text-shadow:0 0 15px #ff00aa;
-}
-to{
-text-shadow:0 0 40px #ff66cc;
-}
+footer{
+text-align:center;
+padding:30px;
+background:black;
+color:#aaa;
 }
 
 </style>
@@ -206,30 +220,45 @@ text-shadow:0 0 40px #ff66cc;
 
 </header>
 
-<!-- PORTADA -->
+<!-- INICIO -->
 
-<div class="section active" id="sec0" style="background-image:url('hybe.jpg')">
+<div class="section active" id="sec0">
 
-<div class="content" style="text-align:center; padding-top:120px;">
+<div class="content">
 
 <h1 class="hero-title">HYBE x BTS</h1>
 
-<h2>Transformación Digital Sostenible</h2>
+<p class="subtitle">
+Transformación Digital Sostenible y el impacto global del fandom ARMY
+</p>
 
 <div class="card">
-<p style="font-size:1.3rem;">
-Este proyecto analiza cómo HYBE Corporation y BTS representan
-una nueva era de innovación digital, sostenibilidad y conexión global
-a través del fandom ARMY y plataformas tecnológicas como Weverse.
+
+<p>
+HYBE Corporation se ha convertido en una de las empresas más influyentes
+del entretenimiento global gracias a la integración de innovación digital,
+marketing interactivo y comunidades virtuales como Weverse.
 </p>
+
+<p>
+A través de BTS, la compañía logró construir una conexión emocional
+entre artistas y fandoms, demostrando cómo la tecnología puede fortalecer
+la comunicación, el alcance internacional y la participación de millones
+de personas alrededor del mundo.
+</p>
+
 </div>
+
+<p class="quote">
+“Music transcends language.” — BTS 💜
+</p>
 
 </div>
 </div>
 
 <!-- MODELO -->
 
-<div class="section" id="sec1" style="background-image:url('bts.jpg')">
+<div class="section" id="sec1">
 
 <div class="content">
 
@@ -237,14 +266,24 @@ a través del fandom ARMY y plataformas tecnológicas como Weverse.
 
 <div class="card">
 
+<h3>Modelo Centrado en el Ser Humano</h3>
+
 <p>
-HYBE utiliza un modelo centrado en la innovación tecnológica,
-la sostenibilidad y la experiencia del usuario.
-Gracias a plataformas digitales como Weverse,
-la empresa logró transformar la relación entre artistas y fandoms.
+HYBE implementa un modelo digital enfocado en la experiencia del usuario,
+la interacción constante y la innovación tecnológica.
 </p>
 
-<img src="hybe.jpg">
+<p>
+Plataformas como Weverse permiten crear espacios donde los fans pueden
+interactuar con artistas, consumir contenido exclusivo y participar
+activamente dentro de la comunidad.
+</p>
+
+<p>
+Además, la empresa ha utilizado inteligencia artificial,
+streaming, marketing digital y estrategias multimedia para expandirse
+globalmente.
+</p>
 
 </div>
 
@@ -253,39 +292,53 @@ la empresa logró transformar la relación entre artistas y fandoms.
 
 <!-- DOFA -->
 
-<div class="section" id="sec2" style="background-image:url('hybe.jpg')">
+<div class="section" id="sec2">
 
 <div class="content">
 
 <h2>🔍 Diagnóstico DOFA</h2>
 
-<div class="card">
+<div class="member-grid">
+
+<div class="member-card">
 <h3>Fortalezas</h3>
 <p>
-Comunidad ARMY global, gran impacto cultural,
-liderazgo tecnológico y estabilidad financiera.
+• Fandom global extremadamente activo.<br>
+• Gran reconocimiento internacional.<br>
+• Innovación tecnológica constante.<br>
+• Fuerte presencia digital.
 </p>
 </div>
 
-<div class="card">
+<div class="member-card">
 <h3>Debilidades</h3>
 <p>
-Altos niveles de producción física y consumo de recursos.
+• Dependencia del contenido digital.<br>
+• Presión mediática constante.<br>
+• Altos costos de producción.
 </p>
 </div>
 
-<div class="card">
+<div class="member-card">
 <h3>Oportunidades</h3>
 <p>
-Crear entretenimiento sostenible y campañas ecológicas.
+• Expansión internacional.<br>
+• Desarrollo sostenible.<br>
+• Nuevas plataformas digitales.<br>
+• Colaboraciones globales.
 </p>
 </div>
 
-<div class="card">
+<div class="member-card">
 <h3>Amenazas</h3>
 <p>
-Presión ambiental y críticas hacia el impacto industrial.
+• Competencia dentro del K-pop.<br>
+• Críticas en redes sociales.<br>
+• Saturación digital.<br>
+• Cambios en tendencias globales.
 </p>
+</div>
+
 </div>
 
 </div>
@@ -293,7 +346,7 @@ Presión ambiental y críticas hacia el impacto industrial.
 
 <!-- OBJETIVOS -->
 
-<div class="section" id="sec3" style="background-image:url('bts.jpg')">
+<div class="section" id="sec3">
 
 <div class="content">
 
@@ -304,8 +357,9 @@ Presión ambiental y críticas hacia el impacto industrial.
 <h3>Objetivo General</h3>
 
 <p>
-Implementar estrategias digitales sostenibles
-que fortalezcan el impacto positivo de HYBE y BTS.
+Analizar cómo HYBE y BTS utilizan herramientas digitales
+para fortalecer el impacto cultural, social y comunicativo
+a nivel global.
 </p>
 
 </div>
@@ -315,10 +369,10 @@ que fortalezcan el impacto positivo de HYBE y BTS.
 <h3>Objetivos Específicos</h3>
 
 <p>
-• Reducir el impacto ambiental.<br>
-• Impulsar energías renovables.<br>
-• Mejorar bienestar del talento.<br>
-• Fortalecer la participación de ARMY.
+• Identificar estrategias digitales utilizadas por HYBE.<br>
+• Comprender el papel de ARMY dentro de la comunidad global.<br>
+• Analizar la sostenibilidad digital en la industria musical.<br>
+• Reconocer el impacto cultural de BTS.
 </p>
 
 </div>
@@ -328,7 +382,7 @@ que fortalezcan el impacto positivo de HYBE y BTS.
 
 <!-- PLAN -->
 
-<div class="section" id="sec4" style="background-image:url('hybe.jpg')">
+<div class="section" id="sec4">
 
 <div class="content">
 
@@ -338,48 +392,58 @@ que fortalezcan el impacto positivo de HYBE y BTS.
 
 <tr>
 <th>Estrategia</th>
-<th>Acción</th>
-<th>Periodo</th>
+<th>Actividad</th>
+<th>Resultado Esperado</th>
 </tr>
 
 <tr>
-<td>Digitalización Verde</td>
-<td>Optimización de plataformas digitales</td>
-<td>2026-2027</td>
+<td>Digitalización</td>
+<td>Fortalecer plataformas digitales</td>
+<td>Mayor interacción global</td>
 </tr>
 
 <tr>
-<td>Merch Sostenible</td>
-<td>Lightsticks ecológicos y reciclables</td>
-<td>2026-2028</td>
+<td>Sostenibilidad</td>
+<td>Reducir producción innecesaria</td>
+<td>Menor impacto ambiental</td>
 </tr>
 
 <tr>
-<td>Bienestar Artístico</td>
-<td>Programas de salud mental</td>
-<td>2026</td>
+<td>Participación</td>
+<td>Integrar campañas con ARMY</td>
+<td>Mayor compromiso comunitario</td>
+</tr>
+
+<tr>
+<td>Innovación</td>
+<td>Uso de IA y multimedia</td>
+<td>Expansión tecnológica</td>
 </tr>
 
 </table>
-
-<img src="lightstick.jpg">
 
 </div>
 </div>
 
 <!-- SEGUIMIENTO -->
 
-<div class="section" id="sec5" style="background-image:url('bts.jpg')">
+<div class="section" id="sec5">
 
 <div class="content">
 
-<h2>📊 Seguimiento</h2>
+<h2>📊 Seguimiento y Control</h2>
 
 <div class="card">
 
 <p>
-El proyecto será monitoreado mediante indicadores ESG,
-participación del fandom ARMY y métricas de sostenibilidad.
+El seguimiento del proyecto puede realizarse mediante indicadores
+de participación digital, métricas de sostenibilidad y análisis
+de interacción dentro de plataformas como Weverse y redes sociales.
+</p>
+
+<p>
+También es importante monitorear el bienestar de los artistas,
+la percepción del fandom y la adaptación tecnológica constante.
 </p>
 
 </div>
@@ -389,44 +453,78 @@ participación del fandom ARMY y métricas de sostenibilidad.
 
 <!-- BTS -->
 
-<div class="section" id="sec6" style="background-image:url('bts.jpg')">
+<div class="section" id="sec6">
 
 <div class="content">
 
-<h2 style="text-align:center;">💜 BTS y su Impacto Global</h2>
+<h2>💜 BTS y su Impacto Global</h2>
 
 <div class="member-grid">
 
 <div class="member-card">
 <h3>RM</h3>
-<p>Líder de BTS y portavoz de mensajes sociales.</p>
+<p>Líder del grupo y representante del mensaje social de BTS.</p>
 </div>
 
 <div class="member-card">
-<h3>Jungkook</h3>
-<p>Artista global e ícono digital de la nueva generación.</p>
+<h3>Jin</h3>
+<p>Reconocido por su carisma, humor y estabilidad vocal.</p>
+</div>
+
+<div class="member-card">
+<h3>SUGA</h3>
+<p>Productor y rapero con gran influencia artística.</p>
+</div>
+
+<div class="member-card">
+<h3>j-hope</h3>
+<p>Energía, baile y creatividad dentro del grupo.</p>
 </div>
 
 <div class="member-card">
 <h3>Jimin</h3>
-<p>Reconocido por su sensibilidad artística y emocional.</p>
+<p>Conocido por su sensibilidad emocional y talento escénico.</p>
 </div>
 
 <div class="member-card">
-<h3>ARMY</h3>
-<p>Uno de los fandoms más grandes e influyentes del mundo.</p>
+<h3>V</h3>
+<p>Ícono visual con estilo artístico único.</p>
+</div>
+
+<div class="member-card">
+<h3>Jungkook</h3>
+<p>Artista global reconocido internacionalmente.</p>
+</div>
+
+<div class="member-card">
+<h3>ARMY 💜</h3>
+<p>Fandom global que conecta millones de personas.</p>
 </div>
 
 </div>
 
-<img src="bts.jpg">
+<div class="card">
+
+<p>
+BTS ha logrado trascender la música para convertirse en un fenómeno
+cultural y comunicativo. Sus mensajes sobre salud mental,
+amor propio y crecimiento personal han impactado positivamente
+a millones de personas.
+</p>
+
+<p>
+Además, el grupo ha demostrado cómo las comunidades digitales
+pueden crear espacios de apoyo, creatividad y activismo social.
+</p>
+
+</div>
 
 </div>
 </div>
 
 <!-- CONCLUSION -->
 
-<div class="section" id="sec7" style="background-image:url('hybe.jpg')">
+<div class="section" id="sec7">
 
 <div class="content">
 
@@ -435,16 +533,31 @@ participación del fandom ARMY y métricas de sostenibilidad.
 <div class="card">
 
 <p>
-HYBE y BTS representan un modelo innovador donde
-la tecnología, la música y la sostenibilidad pueden coexistir.
-La transformación digital no solo depende de herramientas tecnológicas,
-sino también del impacto social y humano que generan.
+HYBE y BTS representan un ejemplo de cómo la transformación digital
+puede generar impacto global dentro de la industria del entretenimiento.
+</p>
+
+<p>
+La combinación entre tecnología, innovación y conexión emocional
+ha permitido construir una comunidad internacional sólida y activa.
+</p>
+
+<p>
+Finalmente, este proyecto demuestra que la sostenibilidad,
+la comunicación digital y la cultura pueden coexistir para crear
+nuevas formas de interacción en la sociedad contemporánea.
 </p>
 
 </div>
 
 </div>
 </div>
+
+<footer>
+
+💜 Proyecto académico inspirado en BTS, HYBE y ARMY
+
+</footer>
 
 <script>
 
